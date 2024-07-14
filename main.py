@@ -16,12 +16,15 @@ def convert_to_pptx(input_file):
     file_name, file_extension = os.path.splitext(input_file)
     output_file = file_name + ".pptx"
     
-    if file_extension.lower() in ['.ppt', '.odp', '.otp']:
-        # המרה ל-pptx באמצעות LibreOffice
-        subprocess.run(['libreoffice', '--headless', '--convert-to', 'pptx', input_file, '--outdir', os.path.dirname(output_file)])
-        return output_file
-    elif file_extension.lower() == '.pptx':
+    if file_extension.lower() == '.pptx':
         return input_file
+
+    # if file_extension.lower() in ['.ppt', '.odp', '.otp']:
+    #     # המרה ל-pptx באמצעות LibreOffice
+    #     subprocess.run(['libreoffice', '--headless', '--convert-to', 'pptx', input_file, '--outdir', os.path.dirname(output_file)])
+    #     return output_file
+    # elif file_extension.lower() == '.pptx':
+    #     return input_file
     else:
         # עבור פורמטים לא נתמכים, נזרוק שגיאה
         raise ValueError(f"פורמט קובץ לא נתמך: {file_extension}")
@@ -133,7 +136,7 @@ def main():
     if 'translated_file' not in st.session_state:
         st.session_state.translated_file = None
 
-    uploaded_file = st.file_uploader("בחרו קובץ PowerPoint", type=["pptx", "ppt", "odp", "otp"])
+    uploaded_file = st.file_uploader("בחרו קובץ PowerPoint", type=["pptx"])
 
     if uploaded_file is not None:
         # st.write("הקובץ הועלה בהצלחה!")

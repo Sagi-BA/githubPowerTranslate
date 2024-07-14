@@ -1,10 +1,10 @@
 ![Alt text](https://i.imgur.com/RhRQLLN.jpg)
 
-# 👀 LinguaKid
+# 👀 Power Point Translate to Hebrew
 
-Lingukid is an interactive English learning app designed for children
+An application for translating PowerPoint presentations from English to Hebrew while maintaining the original design
 
-> You can try the app [here](https://sagi-linguakid.streamlit.app/)
+> You can try the app [here](https://sagi-PowerTranslate.streamlit.app/)
 
 [![Linktree](https://img.shields.io/badge/linktree-white?style=for-the-badge&logo=linktree&logoColor=43E55E)](https://linktr.ee/sagib?lt_utm_source=lt_share_link#373198503) |
 [![Facebook](https://img.shields.io/badge/facebook-white?style=for-the-badge&logo=facebook&logoColor=0866FF)](https://www.facebook.com/sagi.baron) |
@@ -23,7 +23,13 @@ Lingukid is an interactive English learning app designed for children
 
 ## How it works
 
-The app displays words in English and asks users to choose the correct translation in Hebrew. It includes several difficulty levels, instant feedback, and a scoring system. The game includes sound effects for better learning of pronunciation, as well as fun animations like confetti upon successful completion. The application is adapted to the user's age and designed in a colorful and eye-catching way, which makes the learning experience fun and interesting for children.
+Upload: The user uploads a PowerPoint file to the application.
+Extraction and gathering: the application extracts the text from each slide and translates it from English to Hebrew.
+Text Replacement: The translated text is replaced in the presentation while maintaining the original formatting.
+File creation: A new PowerPoint file is created with the translated content.
+Download: The user can download the translated presentation directly from the interface.
+
+The entire process is automatic and preserves the original design, including fonts, colors and the layout of the slides.
 
 ## Install dependencies
 

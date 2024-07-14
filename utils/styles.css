@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+:root {
+  --primary-color: #0099ff;
+  --primary-hover: #0077cc;
+  --background-color: #f0f4f8;
+  --text-color: #1a202c;
+  --header-footer-bg: #f0f2f6;
+  --correct-color: #32cd32;
+  --incorrect-color: #ff6347;
+}
+
+body {
+  direction: rtl;
+  text-align: right;
+  font-family: "Rubik", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 24px;
+}
+
+.image-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.circular-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.half-hidden {
+  clip-path: inset(0 0 50% 0);
+}
+
+.stApp > header,
+.stApp > footer {
+  background-color: var(--header-footer-bg);
+  padding: 1rem;
+}
+
+.stApp > footer {
+  text-align: center;
+}
+
+.main .block-container {
+  max-width: 1200px;
+  padding: 2rem 1rem;
+}
+
+.stButton > button {
+  width: 100%;
+  margin: 0.5rem 0;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 12px 24px;
+}
+
+.stButton > button:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  direction: rtl;
+  text-align: right;
+}
+p {
+  font-size: 30px;
+}
+.row-widget.stRadio > div {
+  flex-direction: row-reverse;
+}
+
+.stCheckbox > label {
+  direction: ltr;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.stFileUploader > div:first-child,
+.stFileUploader > div:first-child > div {
+  width: 100%;
+}
+
+.word-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.word-item {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.word-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+.score {
+  font-weight: bold;
+}
+
+.score.correct {
+  color: var(--correct-color);
+}
+
+.score.incorrect {
+  color: var(--incorrect-color);
+}
+
+.final-score {
+  text-align: center;
+  font-size: 26px;
+  margin-top: 20px;
+}
+
+.normal-button {
+  background-color: var(--primary-color);
+}
+
+.correct-button {
+  background-color: var(--correct-color);
+}
+
+.user-count {
+  color: var(--text-color);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.word-animation {
+  font-size: 72px;
+  font-weight: bold;
+  color: var(--text-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: bounce 1s infinite;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .main .block-container {
+    padding: 1rem;
+  }
+
+  .stButton > button {
+    padding: 10px 20px;
+  }
+
+  .word-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .word-item {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .word-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .word-item {
+    padding: 8px;
+  }
+
+  .stNumberInput {
+    margin-top: -1rem;
+  }
+  .stNumberInput > div > div > input {
+    font-size: 54px;
+  }
+  .stNumberInput > div > div > label {
+    font-size: 54px;
+  }
+}

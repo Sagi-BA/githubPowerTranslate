@@ -1,0 +1,13 @@
+streamlit 
+python-dotenv
+python-pptx 
+googletrans==3.1.0a0 
+# tqdm
+
+# comtypes 
+# pywin32
+
+
+# gtts
+# groq
+# aiohttp

@@ -5,10 +5,7 @@ googletrans==3.1.0a0
 aiohttp #This is for telegram
 
 # tqdm
-
 # comtypes 
 # pywin32
-
-
 # gtts
 # groq

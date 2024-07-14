@@ -123,20 +123,23 @@ if 'counted' not in st.session_state:
 initialize_user_count()
 
 def main():
-    header_content, image_path, footer_content = initialize()    
+    header_content, image_path, footer_content = initialize()
 
     st.markdown(f"<h2 style='text-align: center; color: #FF6347;'>{header_content}</h2>", unsafe_allow_html=True)
+
+    if image_path:
+        st.image(image_path, use_column_width=True)
 
     if 'translated_file' not in st.session_state:
         st.session_state.translated_file = None
 
-    uploaded_file = st.file_uploader("בחר קובץ PowerPoint", type=["pptx", "ppt", "odp", "otp"])
+    uploaded_file = st.file_uploader("בחרו קובץ PowerPoint", type=["pptx", "ppt", "odp", "otp"])
 
     if uploaded_file is not None:
         # st.write("הקובץ הועלה בהצלחה!")
         
-        if st.button("תרגם"):
-            with st.spinner("מתרגם..."):
+        if st.button("תרגם את המצגת לעברית"):
+            with st.spinner("מתרגם לעברית..."):
                 # שמירת הקובץ שהועלה באופן זמני
                 temp_input = tempfile.NamedTemporaryFile(delete=False, suffix="." + uploaded_file.name.split('.')[-1])
                 temp_input.write(uploaded_file.read())

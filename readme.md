@@ -19,7 +19,7 @@ An application for translating PowerPoint presentations from English to Hebrew w
 
 ## Watch the video tutorial
 
-![header image](https://i.imgur.com/mhAgJqZ.jpeg)
+![header image](https://i.imgur.com/AYjXfzs.jpeg)
 
 ## How it works
 

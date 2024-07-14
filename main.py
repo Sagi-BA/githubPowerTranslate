@@ -107,7 +107,7 @@ def get_binary_file_downloader_html(bin_file, file_label='File'):
             }}
         </style>
     """
-    download_button = f'<a href="{href}" download="{os.path.basename(bin_file)}" class="download-button">הורד {file_label}</a>'
+    download_button = f'<a href="{href}" download="{os.path.basename(bin_file)}" class="download-button">לחיצה להורדת {file_label}</a>'
     return f'{custom_css}{download_button}'
 
 # Initialize TelegramSender
